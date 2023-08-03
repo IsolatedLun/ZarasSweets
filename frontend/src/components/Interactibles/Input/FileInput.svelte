@@ -44,6 +44,7 @@
             {id}
             on:input={handleInput}
             type="file"
+			data-file-type={fileType}
             class="[ pos-absolute inset-0 opacity-0 width-100 ]"
         />
 	</label>

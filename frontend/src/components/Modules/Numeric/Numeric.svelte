@@ -4,5 +4,5 @@
 </script>
 
 <svelte:element this={tag}>
-	{Intl.NumberFormat('en', { notation: 'compact' }).format(value)}
+	{Intl.NumberFormat('en', { notation: 'compact', minimumSignificantDigits: 2 }).format(value)}
 </svelte:element>
