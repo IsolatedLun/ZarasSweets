@@ -30,6 +30,21 @@
         background-color: transparent;
     }
 
+    &[data-attachments*='mix'] {
+        $lightness: lightness($background);
+        $difference: 0%;
+
+        @if $lightness > 50% {
+            $difference: 25%;
+        }
+        @else {
+            $difference: 35%;
+        }
+
+        $brighterBackground: color.adjust($background, $lightness: $difference);
+        color: $brighterBackground;
+    }
+
     // Padding
     &[data-attachments*='tiny-pad'] {
         padding: $button-padding-tiny;
@@ -60,14 +75,19 @@
     &[data-attachments*='rotate-icon'] {
         .icon {
             display: block;
-            animation: rotateButtonIconAnimation $buttom-anim-rotate-icon-duration infinite alternate;
+            animation: 
+                rotateButtonIconAnimation 
+                $buttom-anim-rotate-icon-duration 
+                infinite 
+                alternate
+            ;
         }
     }
 }
 
 .button {
     &[data-variant='primary'] {
-        @include createButton(hsl(206, 100%, 45%));
+        @include createButton($button-primary);
     }
 
     position: relative;

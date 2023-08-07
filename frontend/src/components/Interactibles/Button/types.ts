@@ -2,6 +2,7 @@ export type ButtonAttachments =
 	| ''
 	| 'hologram'
 	| 'transparent'
+	| 'mix'
 
 	| 'tiny-pad'
 	| 'small-pad'

@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { createEventDispatcher, onMount } from 'svelte';
 	import { cubeCss } from '../../../utils/cubeCss/cubeCss';
-	import type { FileInputTypes } from './types';
+	import type { FileInputTypes, FileInputVariants } from './types';
 
 	onMount(() => {
 		id = crypto.randomUUID();
+		use(inputEl!);
 	});
 
 	function handleInput() {
@@ -21,9 +22,10 @@
 	}
 
 	export let id: string = '';
+	export let use: (_this: HTMLElement) => void = () => null;
 	export let cls = cubeCss('', '', '');
 	export let fileType: FileInputTypes = 'any';
-	export let variant = 'default';
+	export let variant: FileInputVariants = 'primary';
 	export let disabled = false;
 
 	let inputEl: HTMLInputElement;
@@ -38,14 +40,13 @@
 </script>
 
 <div class={_class.toString()} data-variant={variant} data-disabled={disabled}>
-	<label for={id}>
+	<label for={id} class="[ display-block input ]">
         <input
             bind:this={inputEl}
             {id}
             on:input={handleInput}
             type="file"
-			data-file-type={fileType}
-            class="[ pos-absolute inset-0 opacity-0 width-100 ]"
+			data-file-type={fileType} 
         />
 	</label>
 </div>

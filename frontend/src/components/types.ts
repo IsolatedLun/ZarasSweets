@@ -1,4 +1,4 @@
-export interface Props_DataModel {
+export interface DB_Model {
 	id: number;
 	date_created: string;
 }

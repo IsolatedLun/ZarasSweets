@@ -17,16 +17,16 @@
 	}
 
 	function handleKeyDown(e: KeyboardEvent) {
-		if (e.key === 'Enter') dispatch('enter');
+		dispatch(e.key.toLowerCase(), e);
 	}
 
 	export let cls = cubeCss('', '', '');
+	export let use: (_this: HTMLElement) => void = () => null;
 	export let containerCls = cubeCss('', '', '');
 	export let variant: TextInputVariants = 'primary';
 	export let attachments: TextInputAttachments[] = [];
 	export let label: string;
 	export let placeholder: string;
-	export let use: (_this: HTMLElement) => void = () => null;
 	export let showLabel = false;
 
 	export let id = '';

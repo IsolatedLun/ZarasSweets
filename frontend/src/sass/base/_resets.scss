@@ -34,16 +34,16 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: $gobal-heading-line-height;
+	line-height: $global-heading-line-height;
 }
 
 p {
-	line-height: $gobal-paragraph-line-height;
+	line-height: $global-paragraph-line-height;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
+	text-decoration: underline;
+	color: $a-color;
 }
 
 ul {
@@ -56,7 +56,7 @@ a.button,
 select,
 textarea {
 	font-family: inherit;
-	font-size: var(--fs-350);
+	font-size: $global-font-size;
 }
 
 input:where([type='radio'], [type='checkbox']) {
