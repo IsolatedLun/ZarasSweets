@@ -13,3 +13,4 @@ export type ButtonAttachments =
 	| 'flat';
 
 export type ButtonVariants = 'primary';
+export type ButtonTypes = 'submit' | 'reset' | 'button';

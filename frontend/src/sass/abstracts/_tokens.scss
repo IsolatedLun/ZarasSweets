@@ -17,11 +17,11 @@ $clr-neutral-500: map-get(map-get($active-theme, 'neutral'), 500);
 $global-primary-font: 'Ubuntu';
 $global-color-scheme: dark;
 
-$global-background: black;
+$global-background: none;
 $global-font-size: var(--fs-400);
 $global-font-family: $global-primary-font, system-ui;
 
-$border-radius-bevelled: 9px;
+$border-radius-bevelled: 6px;
 $border-radius-max: 100vmax;
 
 $z-index-10: 999;
@@ -66,14 +66,14 @@ $button-hologram-transparency: 0.55;
 $buttom-anim-rotate-icon-duration: 1s;
 $button-anim-overlay-duration: 0.35s;
 
-// Button
+// Input
 $input-primary: $clr-neutral-400;
 $input-primary-neutral: $clr-neutral-500;
 
 $input-padding: 0.475rem 0.8rem;
 
-$input-box-shadow: 0 0 0px 3px;
-$input-border-thickness: 2px;
+$input-box-shadow: 0 0 1px 3px;
+$input-border-thickness: 1px;
 $input-end-icon-left: 92%;
 $input-end-icon-brightness: 55%;
 $input-border-color-transition-duration: 244ms;

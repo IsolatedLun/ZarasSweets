@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher, onMount } from 'svelte';
 	import { spawnOverlay } from './utils';
-	import type { ButtonAttachments } from './types';
+	import type { ButtonAttachments, ButtonTypes } from './types';
 	import { cubeCss } from '../../../utils/cubeCss/cubeCss';
 
 	onMount(() => {
@@ -17,10 +17,10 @@
 	export let use: (_this: HTMLElement) => void = () => null;
 	export let variant = 'primary';
 	export let attachments: ButtonAttachments[] = [];
+	export let type: ButtonTypes = 'button';
 	
     export let disabled = false;
 	export let selected = false;
-	export let isSubmit = false;
 	
     export let to: string = '';
 
@@ -53,7 +53,7 @@
 		on:click={handleClick}
 
 		class={_class.toString()}
-		type={isSubmit ? 'submit' : 'button'}
+		{type}
         
 		data-variant={variant}
 		data-attachments={attachments.join(',')}

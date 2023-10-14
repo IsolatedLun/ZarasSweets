@@ -22,7 +22,9 @@ body {
 	font-family: $global-font-family;
 	font-size: $global-font-size;
 
-	background-color: $global-background;
+	@if $global-background != none {
+		background-color: $global-background;
+	}
 	text-rendering: optimizeLegibility;
 
 	min-height: 100%;
@@ -41,9 +43,13 @@ p {
 	line-height: $global-paragraph-line-height;
 }
 
-a {
+a:not(.button) {
 	text-decoration: underline;
 	color: $a-color;
+}
+
+a:is(.button) {
+	text-decoration: none;
 }
 
 ul {

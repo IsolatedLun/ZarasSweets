@@ -17,7 +17,7 @@
 	}
 
 	function handleKeyDown(e: KeyboardEvent) {
-		dispatch(e.key.toLowerCase(), e);
+		dispatch("key", e.key.toLowerCase());
 	}
 
 	export let cls = cubeCss('', '', '');
@@ -31,7 +31,9 @@
 
 	export let id = '';
 	export let value = '';
+	export let list: string[] = [];
 	export let endIcon: string | null = null;
+	export const type: string = 'text';
 
 	const dispatch = createEventDispatcher();
 
@@ -61,14 +63,18 @@
 		<input
 			bind:this={_this}
 			bind:value
+
 			on:input={handleInput}
 			on:keydown={handleKeyDown}
+
+			{id}
+			{placeholder}
+			{...{type}} 
 			class={_class.toString()}
+			list={id + "-data-list"}
+
 			data-variant={variant}
 			data-attachments={attachments.join(',')}
-			{id}
-			type="text"
-			{placeholder}
 		/>
 
 		{#if endIcon}
@@ -82,3 +88,11 @@
 		{/if}
 	</div>
 </Flex>
+
+{#if list.length > 0}
+	<datalist id={id + "-data-list"}>
+		{#each list as option}
+			<option value={option}></option>
+		{/each}
+	</datalist>
+{/if}
