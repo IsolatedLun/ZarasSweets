@@ -63,6 +63,10 @@ select,
 textarea {
 	font-family: inherit;
 	font-size: $global-font-size;
+
+	@if $global-color-scheme == light {
+		color: white;
+	}
 }
 
 input:where([type='radio'], [type='checkbox']) {
@@ -81,8 +85,6 @@ video {
 
 	object-fit: cover;
 	border-radius: inherit;
-
-	background-color: black;
 }
 
 canvas {

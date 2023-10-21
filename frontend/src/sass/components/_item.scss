@@ -1,0 +1,39 @@
+@use '../abstracts/' as *;
+
+.item {
+    position: relative;
+
+    border-radius: $border-radius-bevelled;
+    box-shadow: $item-box-shadow;
+
+    @if $item-disable-anim == false {
+        &:is(:hover, :focus-within) {
+            transform: scale($item-hover-scale);
+        }
+
+        transition: $item-transitions;
+    }
+
+    &::after {
+        content: '';
+    }
+
+    &__thumbnail {
+        max-width: 100%;
+        aspect-ratio: 1;
+        border-start-start-radius: $border-radius-bevelled;
+        border-start-end-radius: $border-radius-bevelled;
+    }
+
+    &__content {
+        padding: 0.8rem;
+        color: $clr-text-inverse;
+
+
+        border: 1px solid $clr-neutral-400;
+        border-top: none;
+
+        border-end-start-radius: $border-radius-bevelled;
+        border-end-end-radius: $border-radius-bevelled;
+    }
+}

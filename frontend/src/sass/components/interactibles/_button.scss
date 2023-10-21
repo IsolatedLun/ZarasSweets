@@ -90,6 +90,10 @@
         @include createButton($button-primary);
     }
 
+    &[data-variant='custom'] {
+        border: none;
+    }
+
     position: relative;
     overflow: hidden;
 

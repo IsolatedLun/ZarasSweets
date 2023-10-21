@@ -1,23 +1,31 @@
 <script>
 	import Button from "../components/Interactibles/Button/Button.svelte";
-	import TextInput from "../components/Interactibles/Input/TextInput.svelte";
+	import Input from "../components/Interactibles/Input/Input.svelte";
+	import TextInput from "../components/Interactibles/Input/Input.svelte";
+	import Store from "../components/Layouts/Store/Store.svelte";
 	import Flex from "../components/Modules/FlexAndGrid/Flex.svelte";
+	import Icon from "../components/Modules/Icon/Icon.svelte";
 	import Numeric from "../components/Modules/Numeric/Numeric.svelte";
+	import { ICON_BUCKET } from "../components/icons";
+	import { cubeCss } from "../utils/cubeCss/cubeCss";
 
 </script>
 
-<main class="container" data-type='full'>
-	<Flex useColumn={true} gap={3}>
-		<div>
-			<h1>Welcome to SvelteKit</h1>
-			<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-		</div>
+<nav class="[ primary-nav ] [ padding-1 padding-inline-3 margin-block-end-2 ]">
+	<Flex align='center' justify='space-between'>
+		<img class="primary-nav__logo" src="./images/logo.png" alt="Zara's Sweets">
 
-		<Flex align='center'>
-			<Button>Continue</Button>
-			<p><span class="[ clr-neutral-800 ]"><Numeric value={345324546} /></span> entrances</p>
+		<Flex tag='ul' cls={cubeCss('primary-nav__links', '', 'fw-bold text-upper')} gap={4}>
+			<li>
+				<a href="">Store</a>
+			</li>
+			<li>
+				<a href="">My Cart</a>
+			</li>
 		</Flex>
-
-		<TextInput label="Label" showLabel={true} placeholder='Enter label' />
 	</Flex>
+</nav>
+
+<main class="container" data-type='full'>
+	<Store />
 </main>

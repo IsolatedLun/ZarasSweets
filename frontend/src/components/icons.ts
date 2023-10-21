@@ -50,3 +50,6 @@ export const ICON_MICROPHONE = '\uf130';
 export const ICON_TEXT = '\uf893';
 export const ICON_BROKEN_LINK = '\uf127';
 export const ICON_COMMUNITY = '\uf0c0';
+
+export const ICON_COOKIE = '\uf563';
+export const ICON_CAKE = '\uf1fd';

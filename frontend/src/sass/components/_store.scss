@@ -1,0 +1,43 @@
+@use '../abstracts/' as *;
+
+.store {
+    grid-template-columns: $store-grid;
+
+    &__items-grid {
+        grid-template-columns: $store-items-grid;
+
+        @if $item-disable-anim == false {
+            &:has(.item:is(:hover, :focus-within)) .item:not(:hover, :focus-within)  {
+                transform: scale($item-not-hover-scale);
+                filter: blur($item-not-hover-blur);
+            }
+        }
+    }
+
+    .filter__items .button {
+        padding: $filter-button-padding;
+        border: $filter-button-border;
+        background-color: transparent;
+
+        border-radius: $border-radius-bevelled;
+
+        &[data-selected='true'] {
+            background-color: $filter-button-background;
+        }
+
+        &:is(:hover, :focus-visible) {
+            border-color: $filter-button-background;
+        }
+    }
+
+    .filter__items li input[type='checkbox'] {
+        @include transformCenter();
+
+        opacity: 0;
+    }
+    
+    .filter__items li:is(:hover, :focus-visible) {
+        input[type='checkbox'] { opacity: 1; }
+        .icon { opacity: 0; }
+    }
+}
