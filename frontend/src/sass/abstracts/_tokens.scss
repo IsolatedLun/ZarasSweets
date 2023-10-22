@@ -105,8 +105,9 @@ $filter-button-border: 2px solid transparent;
 $item-box-shadow: -6px 12px 2px 2px hsl(0 0% 0% / 0.4);
 
 $item-disable-anim: false;
-$item-hover-scale: 1.05;
-$item-not-hover-scale: 0.95;
+$item-hover-scale: 1.02;
+$item-hover-translate-y: -0.5rem;
+$item-not-hover-scale: 0.98;
 $item-not-hover-blur: 2px;
 
-$item-transitions: transform 200ms ease-in-out 88ms, filter 400ms ease-in-out 88ms;
+$item-transitions: transform 200ms ease-in-out 1ms, filter 200ms ease-in-out 1ms;

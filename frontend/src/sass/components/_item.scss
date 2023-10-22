@@ -9,7 +9,7 @@
 
     @if $item-disable-anim == false {
         &:is(:hover, :focus-within) {
-            transform: scale($item-hover-scale);
+            transform: scale($item-hover-scale) translateY($item-hover-translate-y);
         }
 
         transition: $item-transitions;

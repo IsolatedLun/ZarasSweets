@@ -1,0 +1,49 @@
+{
+   "shop": [
+      {
+         "id": 0,
+         "type": "cake",
+         "title": "Chocolate Honey Cake",
+         "price": 18,
+         "unit": "dz",
+         "images": [
+            "output/chocolate_honey_cake/0.jpg",
+            "output/chocolate_honey_cake/1.jpg"
+         ]
+      },
+      {
+         "id": 1,
+         "type": "cookie",
+         "title": "Date Cookies",
+         "price": 18,
+         "unit": "kg",
+         "images": [
+            "output/date_cookies/0.jpg",
+            "output/date_cookies/1.jpg"
+         ]
+      },
+      {
+         "id": 2,
+         "type": "cookie",
+         "title": "Sable",
+         "price": 20,
+         "unit": "kg",
+         "images": [
+            "output/sable/0.jpg",
+            "output/sable/1.jpg",
+            "output/sable/2.jpg",
+            "output/sable/3.jpg"
+         ]
+      }
+   ],
+   "categories": {
+      "cake": 1,
+      "cookie": 2
+   },
+   "titles": [
+      "Chocolate Honey Cake",
+      "Date Cookies",
+      "Sable"
+   ],
+   "max_price": 20
+}

@@ -1,19 +1,13 @@
 import { get, writable } from "svelte/store";
 import type { Store_Shop } from "./types";
+import shopData from '../shop.json';
 
 function createShopStore() {
     const store = writable<Store_Shop>({
-        store: [
-            {
-                id: 0,
-                title: 'Sable',
-                images: [],
-                price: 12,
-                type: 'box',
-                unit: 'box',
-                quantity: 1
-            }
-        ],
+        store: shopData.shop as any,
+        categories: shopData.categories as any,
+        titles: shopData.titles,
+        maxPrice: shopData.max_price,
         cart: {}
     })
 
