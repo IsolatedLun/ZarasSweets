@@ -20,7 +20,7 @@
 		on:click={() => (selected = !selected)}
 	>
 		<Flex align="center" gap={2}>
-			<Flex align="center" gap={2}>
+			<Flex align="end" gap={2}>
 				<div class="[ category-state ] [ pos-relative ]">
 					<Icon>{icon}</Icon>
 					<input

@@ -13,14 +13,18 @@
         padding: $input-padding;
         border: $input-border-thickness solid $neutral;
         border-radius: $border-radius-bevelled;
-        color: $neutral;
+        color: $clr-text-inverse;
     
         background-color: $background;
     
         transition: border-color $input-border-color-transition-duration ease-in-out;
         &:is(:hover, :focus-visible) {
             // border-color: $clr-input-border-on-hov;
-            box-shadow: $input-box-shadow transparentize($neutral, 0.25);
+            box-shadow: $input-box-shadow transparentize($neutral, $input-box-shadow-transparency);
+        }
+
+        &[type='range'] {
+            padding: 0rem;
         }
     }
 

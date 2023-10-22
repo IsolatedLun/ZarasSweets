@@ -23,6 +23,10 @@
 	text-transform: uppercase;
 }
 
+.text-lower {
+	text-transform: lowercase;
+}
+
 // Screen readers
 .visually-hidden {
 	clip: rect(0 0 0 0);

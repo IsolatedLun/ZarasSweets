@@ -90,6 +90,10 @@
         @include createButton($button-primary);
     }
 
+    &[data-variant='muted'] {
+        @include createButton($button-muted);
+    }
+
     &[data-variant='custom'] {
         border: none;
     }

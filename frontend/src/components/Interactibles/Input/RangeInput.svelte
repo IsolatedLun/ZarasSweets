@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher, onMount } from 'svelte';
 	import type { TextInputAttachments, TextInputVariants } from './types';
-	import Button from '../Button/Button.svelte';
-	import Icon from '../../Modules/Icon/Icon.svelte';
 	import Flex from '../../Modules/FlexAndGrid/Flex.svelte';
 	import type { Some } from '../../types';
 	import { cubeCss } from '../../../utils/cubeCss/cubeCss';
@@ -12,28 +10,20 @@
 		use(_this!);
 	});
 
-	function handleInput(e: Event) {
-		dispatch('input', e);
-	}
-
-	function handleKeyDown(e: KeyboardEvent) {
-		dispatch("key", e.key.toLowerCase());
-	}
-
 	export let cls = cubeCss('', '', '');
 	export let use: (_this: HTMLElement) => void = () => null;
 	export let containerCls = cubeCss('', '', '');
 	export let variant: TextInputVariants = 'primary';
 	export let attachments: TextInputAttachments[] = [];
 	export let label: string;
-	export let placeholder: string;
 	export let showLabel = false;
 
 	export let id = '';
-	export let value = '';
-	export let list: string[] = [];
-	export let endIcon: string | null = null;
-	export let type: string = 'text';
+
+    export let min: number;
+	export let value: number = 0;
+    export let max: number;
+    export let step = 1;
 
 	const dispatch = createEventDispatcher();
 
@@ -64,35 +54,18 @@
 			bind:this={_this}
 			bind:value
 
-			on:input={handleInput}
-			on:keydown={handleKeyDown}
+            on:change
+            on:input
 
 			{id}
-			{placeholder}
-			{...{type}} 
+            {min}
+            {max}
+            {step}
 			class={_class.toString()}
-			list={id + "-data-list"}
+            type='range'
 
 			data-variant={variant}
 			data-attachments={attachments.join(',')}
 		/>
-
-		{#if endIcon}
-			<Button
-				cls={cubeCss('input-end-button', '' ,'pos-absolute')}
-				attachments={['transparent']}
-				on:click={() => dispatch('endButtonClick', _this)}
-			>
-				<Icon>{endIcon}</Icon>
-			</Button>
-		{/if}
 	</div>
 </Flex>
-
-{#if type === 'text' && list.length > 0}
-	<datalist id={id + "-data-list"}>
-		{#each list as option}
-			<option value={option}></option>
-		{/each}
-	</datalist>
-{/if}

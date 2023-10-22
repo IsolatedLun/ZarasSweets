@@ -16,19 +16,22 @@ $clr-neutral-800: map-get(map-get($active-theme, 'neutral'), 800);
 
 $clr-text-current: map-get(map-get($active-theme, 'text'), 'current');
 $clr-text-inverse: map-get(map-get($active-theme, 'text'), 'inverse');
+$clr-text-muted: map-get(map-get($active-theme, 'text'), 'muted');
 
 // Global
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@200;300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
 
-$global-primary-font: 'Open Sans';
+$global-primary-font: 'Rubik';
 $global-color-scheme: dark;
 
 $global-background: none;
 $global-font-size: var(--fs-400);
 $global-font-family: $global-primary-font, system-ui;
 
-$border-radius-bevelled: 6px;
+$border-radius-bevelled: 0.4rem;
 $border-radius-max: 100vmax;
 
 $z-index-10: 999;
@@ -58,7 +61,7 @@ $a-color: $clr-primary-400;
 
 // Button
 $button-primary: $clr-primary-400;
-$button-border-radius: $border-radius-bevelled;
+$button-muted: $clr-neutral-600;
 
 $button-padding: 0.5rem 0.85rem;
 $button-padding-tiny: 0.1rem 0.6rem;
@@ -66,6 +69,7 @@ $button-padding-small: 0.35rem 0.8rem;
 $button-padding-big: 0.6rem 1.2rem;
 $button-padding-huge: 0.85rem 1.4rem;
 
+$button-border-radius: $border-radius-bevelled;
 $button-border-thickness: 2px;
 $button-overlay-brightness: 50%;
 $button-hologram-transparency: 0.65;
@@ -74,30 +78,31 @@ $buttom-anim-rotate-icon-duration: 1s;
 $button-anim-overlay-duration: 0.35s;
 
 // Input
-$input-primary: transparent;
-$input-primary-neutral: $clr-neutral-800;
+$input-primary: $clr-neutral-400;
+$input-primary-neutral: $clr-neutral-500;
 
 $input-padding: 0.475rem 0.8rem;
 
 $input-box-shadow: 0 0 1px 3px;
+$input-box-shadow-transparency: 0.5;
 $input-border-thickness: 1px;
 $input-end-icon-left: 92%;
 $input-end-icon-brightness: 55%;
 $input-border-color-transition-duration: 244ms;
 
 // Navbar
-$navbar-logo-size: 4.75rem;
+$navbar-logo-size: 9.75rem;
 
 // Store
 $store-grid: 20% auto;
-$store-items-grid: repeat(auto-fill, minmax(222px, 1fr));
+$store-items-grid: repeat(auto-fill, minmax(200px, 1fr));
 
 $filter-button-padding: 0.4rem 1rem;
 $filter-button-background: $clr-primary-400;
 $filter-button-border: 2px solid transparent;
 
 // Item
-$item-box-shadow: -6px 12px 4px 4px hsl(0 0% 0% / 0.6);
+$item-box-shadow: -6px 12px 2px 2px hsl(0 0% 0% / 0.4);
 
 $item-disable-anim: false;
 $item-hover-scale: 1.05;
