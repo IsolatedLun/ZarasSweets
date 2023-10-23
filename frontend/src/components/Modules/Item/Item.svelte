@@ -28,11 +28,7 @@ import type { T_Item } from "../../../stores/types";
                 attachments={['tiny-pad', 'hologram', 'mix']}
                 selected={shop.isInCart(item.id)}
                 >
-                {#if shop.isInCart(item.id)}
-                    <span class="[  fs-350 ]">Added to Cart</span>
-                    {:else}
-                    <span class="[  fs-350 ]">Add to Cart</span>
-                {/if}
+                <span class="[  fs-350 ]">Open</span>
             </Button>
         </Flex>
 

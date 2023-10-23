@@ -3,6 +3,7 @@
 .item {
     position: relative;
     
+    height: max-content;
     border: 1px solid $clr-neutral-400;
     border-radius: $border-radius-bevelled;
     box-shadow: $item-box-shadow;
