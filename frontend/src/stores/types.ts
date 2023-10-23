@@ -7,6 +7,7 @@ export interface Store_Shop {
 }
 
 export type T_ItemTypes = 'cake' | 'cookie' | 'box';
+export type T_ItemSoryByTypes = 'high_to_low' | 'low_to_high' | 'category';
 export interface T_Item {
     id: number;
     price: number;
@@ -20,6 +21,8 @@ export interface T_Item {
 export type T_CartItem = T_Item & {quantity: number};
 
 export interface T_ItemFilters {
+    title: string;
+
     minPrice: number;
     maxPrice: number;
 

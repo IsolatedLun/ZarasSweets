@@ -85,7 +85,8 @@
     }
 }
 
-.button {
+.button,
+select {
     &[data-variant='primary'] {
         @include createButton($button-primary);
     }

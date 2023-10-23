@@ -1,0 +1,26 @@
+@use '../abstracts/' as *;
+
+.primary-footer {
+    background-color: $clr-neutral-400;
+    border-top: 1px solid $clr-neutral-500;
+
+    &__heart {
+        color: #f5a5b7;
+        animation: heartBeat 750ms infinite alternate;
+        display: inline-block;
+    }
+
+    p {
+        max-width: 42ch;
+    }
+}
+
+@keyframes heartBeat {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.2;
+    }
+}

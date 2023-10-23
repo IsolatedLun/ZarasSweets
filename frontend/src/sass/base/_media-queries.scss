@@ -51,6 +51,10 @@
 			place-items: center !important;
 		}
 
+		*[data-text-center-on-mobile='true'] {
+			text-align: center;
+		}
+
 		*[data-spacing-collapse] {
 			margin: 0;
 			padding: 0;

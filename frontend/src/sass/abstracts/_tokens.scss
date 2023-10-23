@@ -27,7 +27,7 @@ $clr-text-muted: map-get(map-get($active-theme, 'text'), 'muted');
 $global-primary-font: 'Rubik';
 $global-color-scheme: dark;
 
-$global-background: none;
+$global-background: #121212;
 $global-font-size: var(--fs-400);
 $global-font-family: $global-primary-font, system-ui;
 
@@ -111,3 +111,10 @@ $item-not-hover-scale: 0.98;
 $item-not-hover-blur: 2px;
 
 $item-transitions: transform 200ms ease-in-out 1ms, filter 200ms ease-in-out 1ms;
+
+// Card
+$card-background-muted: $clr-neutral-400;
+$card-secondary-muted: $clr-neutral-500;
+
+// Underline
+$underline-border-thickness: 1px;

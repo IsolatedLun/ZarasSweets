@@ -1,0 +1,11 @@
+@use '../abstracts/' as *;
+
+@mixin createCard($background, $secondary) {
+    background-color: $background;
+    border: 1px solid $secondary;
+    border-radius: $border-radius-bevelled;
+}
+
+.card {
+    @include createCard($card-background-muted, $card-secondary-muted);
+}

@@ -32,6 +32,7 @@ export const ICON_SIGN_OUT = '\uf08b';
 export const ICON_SIGN_IN = '\uf090';
 export const ICON_EDIT ='\uf044';
 export const ICON_LOOP = '\uf01e';
+export const ICON_HEART = '\uf004';
 
 export const ICON_GRID_V = '\uf58e';
 export const ICON_GRID_H = '\uf58d';
@@ -54,3 +55,6 @@ export const ICON_COMMUNITY = '\uf0c0';
 
 export const ICON_COOKIE = '\uf563';
 export const ICON_CAKE = '\uf1fd';
+
+export const ICON_INSTAGRAM = '\uf16d';
+export const ICON_TIKTOK = '\ue07b';
