@@ -1,0 +1,18 @@
+.media-scroller {
+    --_auto-column-size: 4rem;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: var(--_auto-column-size);
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+    &[data-snap-inline='true'] {
+        scroll-snap-type: inline mandatory;
+
+        & > * {
+            scroll-snap-align: start;
+        }
+    }
+}

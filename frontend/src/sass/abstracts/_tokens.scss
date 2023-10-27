@@ -18,6 +18,8 @@ $clr-text-current: map-get(map-get($active-theme, 'text'), 'current');
 $clr-text-inverse: map-get(map-get($active-theme, 'text'), 'inverse');
 $clr-text-muted: map-get(map-get($active-theme, 'text'), 'muted');
 
+$clr-misc-error: map-get(map-get($active-theme, 'misc'), 'error');
+
 // Global
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@200;300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
@@ -62,6 +64,7 @@ $a-color: $clr-primary-400;
 // Button
 $button-primary: $clr-primary-400;
 $button-muted: $clr-neutral-600;
+$button-error: $clr-misc-error;
 
 $button-padding: 0.5rem 0.85rem;
 $button-padding-tiny: 0.1rem 0.6rem;
@@ -118,3 +121,14 @@ $card-secondary-muted: $clr-neutral-500;
 
 // Underline
 $underline-border-thickness: 1px;
+
+// Modal
+$modal-grid: repeat(2, 1fr);
+$modal-max-width: 80vw;
+
+$modal-background-overlay: rgba(0 0 0 / 0.6);
+$modal-blur: 4px;
+
+$modal-image-list-max-width: 20rem;
+$modal-current-image-size: clamp(14rem, 32vw, 32rem);
+$modal-list-image-size: clamp(3rem, 16vw, 4rem);

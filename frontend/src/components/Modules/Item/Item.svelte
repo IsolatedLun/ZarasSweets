@@ -1,12 +1,20 @@
 <script lang='ts'>
 	import { shop } from "../../../stores/shop";
-import type { T_Item } from "../../../stores/types";
+    import type { T_Item } from "../../../stores/types";
 	import { cubeCss } from "../../../utils/cubeCss/cubeCss";
 	import { capitalize } from "../../../utils/general";
 	import Button from "../../Interactibles/Button/Button.svelte";
+	import { openModal } from "../../Layouts/Modal/utils";
+	import { MODAL_ID } from "../../consts";
 	import { ICON_IMAGE } from "../../icons";
 	import Flex from "../FlexAndGrid/Flex.svelte";
 	import Icon from "../Icon/Icon.svelte";
+	import ItemPricing from "./ItemPricing.svelte";
+
+    function openItemModal() {
+        shop.setSelectedItem(item.id);
+        openModal(MODAL_ID);
+    }
 
     export let item: T_Item;
 </script>
@@ -18,12 +26,10 @@ import type { T_Item } from "../../../stores/types";
     <Flex cls={cubeCss('item__content', '', 'padding-2')} useColumn={true} gap={2}>
         <p class="[ fs-400 text-ellipsis-2 ]">{item.title}</p>
         <Flex cls={cubeCss('', '', 'width-100')} align='center' justify='space-between'>
-            <p class="fs-450">
-                ${item.price.toFixed(2)} 
-                <span class="[ fs-300 text-lower ]">/ {item.unit}</span>
-            </p>
+            <ItemPricing {item} />
 
             <Button 
+                on:click={openItemModal}
                 cls={cubeCss('', '', '')} 
                 attachments={['tiny-pad', 'hologram', 'mix']}
                 selected={shop.isInCart(item.id)}

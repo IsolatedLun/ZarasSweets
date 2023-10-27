@@ -95,8 +95,19 @@ select {
         @include createButton($button-muted);
     }
 
+    &[data-variant='error'] {
+        @include createButton($button-error);
+    }
+
     &[data-variant='custom'] {
         border: none;
+    }
+
+    &[data-variant='none'] {
+        border: none;
+        padding: none;
+        background-color: transparent;
+        cursor: pointer;
     }
 
     position: relative;

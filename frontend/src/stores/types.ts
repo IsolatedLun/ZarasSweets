@@ -1,5 +1,8 @@
+import type { Some } from "../components/types";
+
 export interface Store_Shop {
     store: T_Item[],
+    selectedItemIndex: number,
     categories: Record<string, number>[],
     titles: string[],
     maxPrice: number,

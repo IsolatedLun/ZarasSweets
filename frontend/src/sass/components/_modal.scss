@@ -1,0 +1,41 @@
+@use '../abstracts/' as *;
+
+.modal {
+    @include transformCenter();
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    width: max-content;
+    max-width: $modal-max-width;
+
+    .modal__inner {
+        display: grid;
+        grid-template-columns: $modal-grid;
+    }
+
+    &::backdrop {
+        background-color: $modal-background-overlay;
+        backdrop-filter: blur($modal-blur);
+    }
+
+    .current-img,
+    &__images .img {
+        border-radius: $border-radius-bevelled;
+    }
+
+    &__images .current-img {
+        width: $modal-current-image-size;
+        aspect-ratio: 1;
+    }
+
+    &__images .images__list {
+        max-width: $modal-image-list-max-width;
+    }
+
+    &__images .images__list .img {
+        width: $modal-list-image-size;
+        aspect-ratio: 1;
+    }
+}
