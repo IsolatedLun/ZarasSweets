@@ -58,3 +58,4 @@ export const ICON_CAKE = '\uf1fd';
 
 export const ICON_INSTAGRAM = '\uf16d';
 export const ICON_TIKTOK = '\ue07b';
+export const ICON_WHATSAPP = '\uf232';

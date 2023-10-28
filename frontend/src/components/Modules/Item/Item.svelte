@@ -1,22 +1,15 @@
 <script lang='ts'>
-	import { shop } from "../../../stores/shop";
-    import type { T_Item } from "../../../stores/types";
+    import type { T_Item, T_ItemContext } from "../../../stores/types";
 	import { cubeCss } from "../../../utils/cubeCss/cubeCss";
 	import { capitalize } from "../../../utils/general";
-	import Button from "../../Interactibles/Button/Button.svelte";
-	import { openModal } from "../../Layouts/Modal/utils";
-	import { MODAL_ID } from "../../consts";
 	import { ICON_IMAGE } from "../../icons";
 	import Flex from "../FlexAndGrid/Flex.svelte";
 	import Icon from "../Icon/Icon.svelte";
-	import ItemPricing from "./ItemPricing.svelte";
-
-    function openItemModal() {
-        shop.setSelectedItem(item.id);
-        openModal(MODAL_ID);
-    }
+	import ItemCartContext from "./context/ItemCartContext.svelte";
+	import ItemShopContext from "./context/ItemShopContext.svelte";
 
     export let item: T_Item;
+    export let context: T_ItemContext;
 </script>
 
 <div class="item">
@@ -25,32 +18,22 @@
     </div>
     <Flex cls={cubeCss('item__content', '', 'padding-2')} useColumn={true} gap={2}>
         <p class="[ fs-400 text-ellipsis-2 ]">{item.title}</p>
-        <Flex cls={cubeCss('', '', 'width-100')} align='center' justify='space-between'>
-            <ItemPricing {item} />
-
-            <Button 
-                on:click={openItemModal}
-                cls={cubeCss('', '', '')} 
-                attachments={['tiny-pad', 'hologram', 'mix']}
-                selected={shop.isInCart(item.id)}
-                >
-                <span class="[  fs-350 ]">Open</span>
-            </Button>
-        </Flex>
+        
+        {#if context === 'shop'}
+            <ItemShopContext {item} />
+            {:else}
+            <ItemCartContext {item} />
+        {/if}
 
         <Flex cls={cubeCss('', '', 'width-100 margin-block-start-1')} align='center' justify='space-between'>
             <p class="[ fs-300 clr-text-muted ]">{capitalize(item.type)}</p>
             {#if item.images.length > 1}
-                <Button 
-                    cls={cubeCss('', '', 'fs-350')}
-                    variant='muted' 
-                    attachments={['capsule', 'tiny-pad', 'hologram', 'mix']}
-                >
+                <p class="fs-350 clr-text-muted">
                     <Flex align='center'>
-                        <Icon cls={cubeCss('', '', 'margin-block-auto')}>{ICON_IMAGE}</Icon>
-                        <span>{item.images.length} images</span>
+                        <Icon cls={cubeCss('', '', 'margin-block-auto')} ariaLabel='Images'>{ICON_IMAGE}</Icon>
+                        <span>{item.images.length}</span>
                     </Flex>
-                </Button>
+                </p>
             {/if}
         </Flex>
     </Flex>

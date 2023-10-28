@@ -20,6 +20,7 @@ def parse_folder(path: str, folder: str, i: int) -> [str, dict]:
             "title": clean_title(title), 
             "price": int(price), 
             "unit": unit, 
+            "quantity": 1,
             "images": []
         }
     

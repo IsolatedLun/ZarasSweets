@@ -21,6 +21,10 @@ function createShopStore() {
             _this.selectedItemIndex = _this.store.findIndex(x => x.id === id);
             return _this;
         }),
+        setQuantity: (id: number, qty: number) => store.update(_this => {
+            _this.cart[id].quantity = qty;
+            return _this;
+        }),
 
         addToCart: (id: number) => store.update(_this => {
             _this.cart[id] = _this.store.find(x => x.id === id)!;
@@ -30,7 +34,10 @@ function createShopStore() {
             delete _this.cart[id];
             return _this;
         }),
-        isInCart: (id: number) => id in get(store).cart
+        isInCart: (id: number) => id in get(store).cart,
+        calculateCartTotal: () => Object.values(get(store).cart)
+            .reduce((sum, x) => sum + (x.price * x.quantity), 0
+        )
     }
 }
 

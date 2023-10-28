@@ -58,6 +58,7 @@ a:where(:not(.button)) {
 
 a:is(.button) {
 	text-decoration: none;
+	color: inherit;
 }
 
 ul {

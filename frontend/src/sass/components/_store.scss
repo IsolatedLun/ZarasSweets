@@ -7,7 +7,7 @@
         grid-template-columns: $store-items-grid;
 
         @if $item-disable-anim == false {
-            &:has(.item:is(:hover, :focus-within)) .item:not(:hover, :focus-within)  {
+            &:has(.item:is(:hover, :focus-visible)) .item:not(:hover, :focus-visible)  {
                 transform: scale($item-not-hover-scale);
                 transform-origin: center;
                 filter: blur($item-not-hover-blur);

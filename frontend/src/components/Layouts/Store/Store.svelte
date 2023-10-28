@@ -110,7 +110,7 @@
 					<p>No items found!</p>
 				{:else}
 					{#each filteredItems as item (item.id)}
-						<Item {item} />
+						<Item {item} context='shop' />
 					{/each}
 			{/if}
 		</div>

@@ -8,6 +8,7 @@ $option-anim-button-overlay: true;
 // Colors
 $clr-primary-400: map-get(map-get($active-theme, 'primary'), 400);
 
+$clr-neutral-300: map-get(map-get($active-theme, 'neutral'), 300);
 $clr-neutral-400: map-get(map-get($active-theme, 'neutral'), 400);
 $clr-neutral-500: map-get(map-get($active-theme, 'neutral'), 500);
 $clr-neutral-600: map-get(map-get($active-theme, 'neutral'), 600);
@@ -19,6 +20,8 @@ $clr-text-inverse: map-get(map-get($active-theme, 'text'), 'inverse');
 $clr-text-muted: map-get(map-get($active-theme, 'text'), 'muted');
 
 $clr-misc-error: map-get(map-get($active-theme, 'misc'), 'error');
+$clr-misc-warn: map-get(map-get($active-theme, 'misc'), 'warn');
+$clr-misc-whatsapp: map-get(map-get($active-theme, 'misc'), 'whatsapp');
 
 // Global
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@200;300;400;500;600&display=swap');
@@ -65,6 +68,7 @@ $a-color: $clr-primary-400;
 $button-primary: $clr-primary-400;
 $button-muted: $clr-neutral-600;
 $button-error: $clr-misc-error;
+$button-whatsapp: $clr-misc-whatsapp;
 
 $button-padding: 0.5rem 0.85rem;
 $button-padding-tiny: 0.1rem 0.6rem;
@@ -126,7 +130,7 @@ $underline-border-thickness: 1px;
 $modal-grid: repeat(2, 1fr);
 $modal-max-width: 80vw;
 
-$modal-background-overlay: rgba(0 0 0 / 0.6);
+$modal-background-overlay: rgba(0 0 0 / 0.7);
 $modal-blur: 4px;
 
 $modal-image-list-max-width: 20rem;

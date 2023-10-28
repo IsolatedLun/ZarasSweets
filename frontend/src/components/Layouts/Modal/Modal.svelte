@@ -11,16 +11,15 @@
 	import MediaScroller from "../../Modules/MediaScroller/MediaScroller.svelte";
 	import { MODAL_ID } from "../../consts";
 
-	onMount(() => {
-		modal.showModal()
-	})
-
 	
     export let item: T_Item = $shop.store[$shop.selectedItemIndex];
     let modal: HTMLDialogElement;
     let currentImgIndex = 0;
 	
-	shop.subscribe(_this => item = _this.store[_this.selectedItemIndex]);
+	shop.subscribe(_this => {
+		item = _this.store[_this.selectedItemIndex];
+		currentImgIndex = 0;
+	});
 </script>
 
 <dialog bind:this={modal} id={MODAL_ID} class="[ modal ] [ gap-3 ]">
@@ -51,7 +50,22 @@
 				</div>
 				<Flex align='center' gap={3}>
 					<ItemPricing {item} />
-					<Button attachments={['small-pad', 'hologram', 'mix']}>Add to Cart</Button>
+					{#if shop.isInCart(item.id)}
+						<Button
+							on:click={() => shop.removeFromCart(item.id)} 
+							variant='error' 
+							attachments={['small-pad', 'hologram', 'mix']}
+						>
+							Remove from Cart
+						</Button>
+						{:else}
+						<Button 
+							on:click={() => shop.addToCart(item.id)}
+							attachments={['small-pad', 'hologram', 'mix']}
+						>
+							Add to Cart
+						</Button>
+					{/if}
 				</Flex>
 			</Card>
 	

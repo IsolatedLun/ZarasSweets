@@ -11,17 +11,18 @@ export interface Store_Shop {
 
 export type T_ItemTypes = 'cake' | 'cookie' | 'box';
 export type T_ItemSoryByTypes = 'high_to_low' | 'low_to_high' | 'category';
+export type T_ItemContext = 'shop' | 'cart';
 export interface T_Item {
     id: number;
     price: number;
+    quantity: number;
 
     title: string;
     images: string[];
+    flavors: Some<string[]>;
     type: T_ItemTypes;
     unit: 'kg' | 'dz' | 'box';
 }
-
-export type T_CartItem = T_Item & {quantity: number};
 
 export interface T_ItemFilters {
     title: string;

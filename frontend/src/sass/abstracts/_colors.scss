@@ -3,6 +3,7 @@ $colors-dark: (
 		400: hsl(266 30% 50%)
 	),
 	neutral: (
+		300: hsl(0, 0%, 6%),
 		400: hsl(0, 0%, 12%),
 		500: hsl(0 0 30%),
 		600: hsl(0 0 40%),
@@ -16,6 +17,8 @@ $colors-dark: (
 	),
 	misc: (
 		error: hsl(376 80% 55%),
+		warn: hsl(55, 92%, 50%),
+		whatsapp: hsl(129, 62%, 44%)
 	)
 );
 
@@ -24,6 +27,7 @@ $colors-light: (
 		400: hsl(266 50% 50%)
 	),
 	neutral: (
+		300: hsl(0, 0%, 8%),
 		400: hsl(0, 0%, 12%),
 		500: hsl(0 0 30%),
 		600: hsl(0 0 40%),
@@ -36,6 +40,8 @@ $colors-light: (
 	),
 	misc: (
 		error: hsl(376 80% 55%),
+		warn: hsl(55, 92%, 50%),
+		whatsapp: hsl(142, 70%, 49%)
 	)
 );
 

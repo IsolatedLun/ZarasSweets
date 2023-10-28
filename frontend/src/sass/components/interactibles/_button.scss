@@ -99,6 +99,10 @@ select {
         @include createButton($button-error);
     }
 
+    &[data-variant='whatsapp'] {
+        @include createButton($button-whatsapp);
+    }
+
     &[data-variant='custom'] {
         border: none;
     }
