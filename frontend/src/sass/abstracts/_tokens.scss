@@ -117,6 +117,8 @@ $item-hover-translate-y: -0.5rem;
 $item-not-hover-scale: 0.98;
 $item-not-hover-blur: 2px;
 
+$item-target-outline: 4px solid $clr-primary-400;
+
 $item-transitions: transform 200ms ease-in-out 1ms, filter 200ms ease-in-out 1ms;
 
 // Card

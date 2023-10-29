@@ -10,6 +10,7 @@
 	import Flex from '../../Modules/FlexAndGrid/Flex.svelte';
 	import Grid from '../../Modules/FlexAndGrid/Grid.svelte';
 	import Item from '../../Modules/Item/Item.svelte';
+	import { TYPE_TO_ICON } from '../../consts';
 	import { ICON_COOKIE } from '../../icons';
 	import type { Some } from '../../types';
 	import StoreFilterItem from './_/StoreFilterItem.svelte';
@@ -53,7 +54,7 @@
 						on:select={(e) => handleSelect(e.detail)}
 						on:deselect={(e) => handleDeselect(e.detail)}
 
-						icon={ICON_COOKIE}
+						icon={TYPE_TO_ICON[category]}
 						type={category}
 						count={$shop.categories[category]}
 					/>

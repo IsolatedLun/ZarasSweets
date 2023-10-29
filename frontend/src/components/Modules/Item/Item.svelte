@@ -1,7 +1,7 @@
 <script lang='ts'>
     import type { T_Item, T_ItemContext } from "../../../stores/types";
 	import { cubeCss } from "../../../utils/cubeCss/cubeCss";
-	import { capitalize } from "../../../utils/general";
+	import { capitalize, deCleanText } from "../../../utils/general";
 	import { ICON_IMAGE } from "../../icons";
 	import Flex from "../FlexAndGrid/Flex.svelte";
 	import Icon from "../Icon/Icon.svelte";
@@ -12,7 +12,7 @@
     export let context: T_ItemContext;
 </script>
 
-<div class="item">
+<div id={deCleanText(item.title)} class="item">
     <div>
         <img class="item__thumbnail" src={item.images[0]} alt="" />
     </div>

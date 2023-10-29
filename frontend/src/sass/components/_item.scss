@@ -16,6 +16,10 @@
         transition: $item-transitions;
     }
 
+    &:target {
+        outline: 4px solid $clr-primary-400;
+    }
+
     &::after {
         content: '';
     }

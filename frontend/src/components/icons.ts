@@ -55,6 +55,9 @@ export const ICON_COMMUNITY = '\uf0c0';
 
 export const ICON_COOKIE = '\uf563';
 export const ICON_CAKE = '\uf1fd';
+export const ICON_PIE = '\uf200';
+export const ICON_BOX = '\uf466';
+export const ICON_BREAD = '\uf7ec';
 
 export const ICON_INSTAGRAM = '\uf16d';
 export const ICON_TIKTOK = '\ue07b';

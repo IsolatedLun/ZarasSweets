@@ -4,12 +4,13 @@
 	import { cubeCss } from "../../../../utils/cubeCss/cubeCss";
 	import Button from "../../../Interactibles/Button/Button.svelte";
 	import Input from "../../../Interactibles/Input/Input.svelte";
+	import { MINIMUM_QTY } from "../../../consts";
     import Flex from "../../FlexAndGrid/Flex.svelte";
 	import ItemPricing from "../ItemPricing.svelte";
 	import { openItemModal } from "../utils";
 
     function setNumberInput(el: HTMLElement) {
-        (el as HTMLInputElement).min = "1";
+        (el as HTMLInputElement).min = String(MINIMUM_QTY);
     }
 
     export let item: T_Item;
@@ -47,11 +48,9 @@
     on:input={(e) => shop.setQuantity(item.id, Number(e.detail.target.value))}
     use={setNumberInput}
     showLabel={true}
-    cls={cubeCss('', '', 'width-max-content')}
+    cls={cubeCss('', '', 'width-100')}
     type='number' 
     placeholder='Enter quantity' 
     label='Quantity' 
     value="1"
 />
-
-<a href="https://api.whatsapp.com/send?phone=71253524&text=Hi%0asuiiii" target="_blank">Send Message</a>

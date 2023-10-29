@@ -2,34 +2,44 @@
    "shop": [
       {
          "id": 0,
-         "quantity": 1,
          "type": "brioche",
-         "title": "Regular Brioches",
+         "title": "Brioches",
+         "flavors": [
+            "dates",
+            "regular",
+            "raisin"
+         ],
+         "selectedFlavors": [],
          "price": 18,
          "unit": "kg",
+         "quantity": 1,
          "images": [
-            "output/regular_brioches/0.jpg",
-            "output/regular_brioches/1.jpg"
+            "output/brioches/0.jpg",
+            "output/brioches/1.jpg"
          ]
       },
       {
          "id": 1,
-         "quantity": 1,
          "type": "cake",
          "title": "Bounty Cake (26cm)",
+         "flavors": [],
+         "selectedFlavors": [],
          "price": 37,
          "unit": "size",
+         "quantity": 1,
          "images": [
-            "output/bounty_cake (26cm)/0.jpg"
+            "output/bounty_cake_(26cm)/0.jpg"
          ]
       },
       {
          "id": 2,
-         "quantity": 1,
          "type": "cake",
          "title": "Chocolate Honey Cake",
+         "flavors": [],
+         "selectedFlavors": [],
          "price": 18,
          "unit": "dz",
+         "quantity": 1,
          "images": [
             "output/chocolate_honey_cake/0.jpg",
             "output/chocolate_honey_cake/1.jpg"
@@ -37,46 +47,113 @@
       },
       {
          "id": 3,
+         "type": "cake",
+         "title": "Honey Cake",
+         "flavors": [],
+         "selectedFlavors": [],
+         "price": 18,
+         "unit": "dz",
          "quantity": 1,
+         "images": [
+            "output/honey_cake/0.jpg",
+            "output/honey_cake/1.jpg"
+         ]
+      },
+      {
+         "id": 4,
          "type": "cookie",
          "title": "Armenian Gata",
+         "flavors": [],
+         "selectedFlavors": [],
          "price": 15,
          "unit": "dz",
+         "quantity": 1,
          "images": [
             "output/armenian_gata/0.jpg",
             "output/armenian_gata/1.jpg"
          ]
       },
       {
-         "id": 4,
+         "id": 5,
+         "type": "cookie",
+         "title": "Cookie Box",
+         "flavors": [],
+         "selectedFlavors": [],
+         "price": 23,
+         "unit": "box",
          "quantity": 1,
+         "images": [
+            "output/cookie_box/0.jpg",
+            "output/cookie_box/1.jpg",
+            "output/cookie_box/2.jpg"
+         ]
+      },
+      {
+         "id": 6,
          "type": "cookie",
          "title": "Date Cookies",
+         "flavors": [],
+         "selectedFlavors": [],
          "price": 18,
          "unit": "kg",
+         "quantity": 1,
          "images": [
             "output/date_cookies/0.jpg",
             "output/date_cookies/1.jpg"
          ]
       },
       {
-         "id": 5,
-         "quantity": 1,
+         "id": 7,
          "type": "cookie",
          "title": "Easter Cookies",
+         "flavors": [],
+         "selectedFlavors": [],
          "price": 25,
          "unit": "kg",
+         "quantity": 1,
          "images": [
-            "output/easter_cookies/0.jpg"
+            "output/easter_cookies/0.jpg",
+            "output/easter_cookies/1.jpg"
          ]
       },
       {
-         "id": 6,
+         "id": 8,
+         "type": "cookie",
+         "title": "Ghraybeh",
+         "flavors": [],
+         "selectedFlavors": [],
+         "price": 18,
+         "unit": "box",
          "quantity": 1,
+         "images": [
+            "output/ghraybeh/0.jpg",
+            "output/ghraybeh/1.jpg"
+         ]
+      },
+      {
+         "id": 9,
+         "type": "cookie",
+         "title": "Maamul",
+         "flavors": [],
+         "selectedFlavors": [],
+         "price": 22,
+         "unit": "kg",
+         "quantity": 1,
+         "images": [
+            "output/maamul/0.jpg",
+            "output/maamul/1.jpg",
+            "output/maamul/2.jpg"
+         ]
+      },
+      {
+         "id": 10,
          "type": "cookie",
          "title": "Sable Cookies",
+         "flavors": [],
+         "selectedFlavors": [],
          "price": 20,
          "unit": "kg",
+         "quantity": 1,
          "images": [
             "output/sable_cookies/0.jpg",
             "output/sable_cookies/1.jpg",
@@ -84,100 +161,147 @@
          ]
       },
       {
-         "id": 7,
-         "quantity": 1,
+         "id": 11,
          "type": "cookie",
          "title": "Salty Cookies",
+         "flavors": [],
+         "selectedFlavors": [],
          "price": 18,
          "unit": "kg",
+         "quantity": 1,
          "images": [
             "output/salty_cookies/0.jpg",
             "output/salty_cookies/1.jpg"
          ]
       },
       {
-         "id": 8,
+         "id": 12,
+         "type": "cookie",
+         "title": "Truffle Box",
+         "flavors": [],
+         "selectedFlavors": [],
+         "price": 18,
+         "unit": "box",
          "quantity": 1,
+         "images": [
+            "output/truffle_box/0.jpg",
+            "output/truffle_box/1.jpg"
+         ]
+      },
+      {
+         "id": 13,
          "type": "cookie",
          "title": "Walnut Cookies",
+         "flavors": [],
+         "selectedFlavors": [],
          "price": 20,
          "unit": "kg",
+         "quantity": 1,
          "images": [
             "output/walnut_cookies/0.jpg",
             "output/walnut_cookies/1.jpg"
          ]
       },
       {
-         "id": 9,
-         "quantity": 1,
+         "id": 14,
          "type": "cookie",
          "title": "Walnut Raisin Cookies",
+         "flavors": [],
+         "selectedFlavors": [],
          "price": 20,
          "unit": "kg",
+         "quantity": 1,
          "images": [
             "output/walnut_raisin_cookies/0.jpg",
             "output/walnut_raisin_cookies/1.jpg"
          ]
       },
       {
-         "id": 10,
-         "quantity": 1,
+         "id": 15,
          "type": "croissant",
-         "title": "Regular Croissants",
+         "title": "Croissants",
+         "flavors": [
+            "chocolate",
+            "cheese",
+            "zaatar",
+            "regular"
+         ],
+         "selectedFlavors": [],
          "price": 20,
          "unit": "kg",
+         "quantity": 1,
          "images": [
-            "output/regular_croissants/0.jpg",
-            "output/regular_croissants/1.jpg",
-            "output/regular_croissants/2.jpg",
-            "output/regular_croissants/3.jpg"
+            "output/croissants/0.jpg",
+            "output/croissants/1.jpg",
+            "output/croissants/2.jpg",
+            "output/croissants/3.jpg"
          ]
       },
       {
-         "id": 11,
-         "quantity": 1,
+         "id": 16,
          "type": "pie",
-         "title": "Date Pie (26cm)",
-         "price": 30,
-         "unit": "size",
-         "images": [
-            "output/date_pie (26cm)/0.jpg"
-         ]
-      },
-      {
-         "id": 12,
-         "quantity": 1,
-         "type": "pie",
-         "title": "Pie",
+         "title": "Cupcake Pie",
+         "flavors": [
+            "strawberry",
+            "chocolate",
+            "apricot",
+            "date"
+         ],
+         "selectedFlavors": [],
          "price": 18,
          "unit": "dz",
+         "quantity": 1,
          "images": [
-            "output/pie/0.jpg",
-            "output/pie/1.jpg"
+            "output/cupcake_pie/0.jpg",
+            "output/cupcake_pie/1.jpg"
+         ]
+      },
+      {
+         "id": 17,
+         "type": "pie",
+         "title": "Pie (26cm)",
+         "flavors": [
+            "strawberry",
+            "apricot",
+            "date"
+         ],
+         "selectedFlavors": [],
+         "price": 30,
+         "unit": "size",
+         "quantity": 1,
+         "images": [
+            "output/pie_(26cm)/0.jpg",
+            "output/pie_(26cm)/1.jpg",
+            "output/pie_(26cm)/2.jpg"
          ]
       }
    ],
    "categories": {
       "brioche": 1,
-      "cake": 2,
-      "cookie": 7,
+      "cake": 3,
+      "cookie": 11,
       "croissant": 1,
       "pie": 2
    },
    "titles": [
-      "Regular Brioches",
+      "Brioches",
       "Bounty Cake (26cm)",
       "Chocolate Honey Cake",
+      "Honey Cake",
       "Armenian Gata",
+      "Cookie Box",
       "Date Cookies",
       "Easter Cookies",
+      "Ghraybeh",
+      "Maamul",
       "Sable Cookies",
       "Salty Cookies",
+      "Truffle Box",
       "Walnut Cookies",
       "Walnut Raisin Cookies",
-      "Regular Croissants",
-      "Date Pie (26cm)",
-      "Pie"
+      "Croissants",
+      "Cupcake Pie",
+      "Pie (26cm)"
    ],
    "max_price": 37
 }

@@ -9,7 +9,7 @@ export interface Store_Shop {
     cart: Record<number, T_Item>,
 }
 
-export type T_ItemTypes = 'cake' | 'cookie' | 'box';
+export type T_ItemTypes = 'cake' | 'cookie' | 'box' | 'brioche' | 'croissant' | 'pie';
 export type T_ItemSoryByTypes = 'high_to_low' | 'low_to_high' | 'category';
 export type T_ItemContext = 'shop' | 'cart';
 export interface T_Item {
@@ -19,7 +19,8 @@ export interface T_Item {
 
     title: string;
     images: string[];
-    flavors: Some<string[]>;
+    flavors: string[];
+    selectedFlavors: string[];
     type: T_ItemTypes;
     unit: 'kg' | 'dz' | 'box';
 }

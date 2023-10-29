@@ -1,6 +1,7 @@
 import { get, writable } from "svelte/store";
 import type { Store_Shop } from "./types";
 import shopData from '../shop.json';
+import { MINIMUM_QTY } from "../components/consts";
 
 function createShopStore() {
     const store = writable<Store_Shop>({
@@ -22,7 +23,24 @@ function createShopStore() {
             return _this;
         }),
         setQuantity: (id: number, qty: number) => store.update(_this => {
-            _this.cart[id].quantity = qty;
+            if(qty >= MINIMUM_QTY)
+                _this.cart[id].quantity = qty;
+            return _this;
+        }),
+
+        selectFlavor: (id: number, flavor: string) => store.update(_this => {
+            const itemIndex = _this.store.findIndex(x => x.id === id);
+            const item = _this.store[itemIndex];
+
+            if(item.selectedFlavors.includes(flavor))
+                item.selectedFlavors = item.selectedFlavors.filter(x => x !== flavor);
+            else
+                item.selectedFlavors.push(flavor);
+
+            _this.store[itemIndex] = item;
+            if(id in _this.cart)
+                _this.cart[id].selectedFlavors = item.selectedFlavors;
+
             return _this;
         }),
 

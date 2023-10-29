@@ -10,6 +10,10 @@
 
     cursor: pointer;
 
+    option {
+        background-color: $background;
+    }
+
     .overlay {
         background-color: color.scale($background, $lightness: $button-overlay-brightness);
     }
@@ -154,6 +158,7 @@ select {
 
 select {
     padding: $button-padding;
+
 }
 
 @keyframes rotateButtonIconAnimation {

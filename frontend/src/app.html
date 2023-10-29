@@ -1,19 +1,225 @@
-<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-
-		<link 
-			rel="stylesheet" 
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
-			integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" 
-			referrerpolicy="no-referrer" 
-		/>
-		
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+ <head>
+  <script type="application/ld+json">
+   {
+   "@context": "https://schema.org",
+   "@type": "ItemList",
+   "url": "https://zaras-sweets.netlify.app/",
+   "numberOfItems": 18,
+   "itemListElement": [
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/brioches/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#brioches",
+         "name": "brioches",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 18
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/bounty_cake_(26cm)/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#bounty_cake_(26cm)",
+         "name": "bounty_cake_(26cm)",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 37
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/chocolate_honey_cake/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#chocolate_honey_cake",
+         "name": "chocolate_honey_cake",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 18
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/honey_cake/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#honey_cake",
+         "name": "honey_cake",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 18
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/armenian_gata/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#armenian_gata",
+         "name": "armenian_gata",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 15
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/cookie_box/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#cookie_box",
+         "name": "cookie_box",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 23
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/date_cookies/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#date_cookies",
+         "name": "date_cookies",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 18
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/easter_cookies/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#easter_cookies",
+         "name": "easter_cookies",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 25
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/ghraybeh/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#ghraybeh",
+         "name": "ghraybeh",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 18
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/maamul/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#maamul",
+         "name": "maamul",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 22
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/sable_cookies/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#sable_cookies",
+         "name": "sable_cookies",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 20
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/salty_cookies/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#salty_cookies",
+         "name": "salty_cookies",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 18
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/truffle_box/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#truffle_box",
+         "name": "truffle_box",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 18
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/walnut_cookies/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#walnut_cookies",
+         "name": "walnut_cookies",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 20
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/walnut_raisin_cookies/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#walnut_raisin_cookies",
+         "name": "walnut_raisin_cookies",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 20
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/croissants/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#croissants",
+         "name": "croissants",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 20
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/cupcake_pie/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#cupcake_pie",
+         "name": "cupcake_pie",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 18
+         }
+      },
+      {
+         "@type": "Product",
+         "image": "https://zaras-sweets.netlify.app/output/pie_(26cm)/0.jpg",
+         "url": "https://zaras-sweets.netlify.app/#pie_(26cm)",
+         "name": "pie_(26cm)",
+         "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": 30
+         }
+      }
+   ]
+}
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width" name="viewport"/>
+  <title>
+   Zara's Sweets
+  </title>
+  <meta content="Zara's sweets, We make a variety of desserts, ranging from cookies and pies to cakes. Our desserts are homemade, in essence they are freshly made and luscious." name="description"/>
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" referrerpolicy="no-referrer" rel="stylesheet"/>
+  %sveltekit.head%
+ </head>
+ <body data-sveltekit-preload-data="hover">
+  <div style="display: contents">
+   %sveltekit.body%
+  </div>
+ </body>
 </html>

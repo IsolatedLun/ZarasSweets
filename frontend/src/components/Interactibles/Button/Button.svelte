@@ -39,6 +39,7 @@
 		bind:this={_this}
 		on:click={handleClick}
 		href={to}
+		target="_blank"
 		class={_class.toString()}
 
 		data-variant={variant}

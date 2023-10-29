@@ -4,7 +4,7 @@
 </script>
 
 <nav class="[ primary-nav ] [ padding-1 padding-inline-3 margin-block-end-2 ]">
-	<Flex align='center' justify='space-between'>
+	<Flex align='center' justify='space-between' gap={4} collapseOnMobile={true} alignCenterOnMobile={true}>
 		<a href="./">
 			<img class="primary-nav__logo" src="./images/logo2.png" alt="Zara's Sweets">
 		</a>

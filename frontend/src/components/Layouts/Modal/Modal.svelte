@@ -48,6 +48,22 @@
 					<p class="[ fs-450 margin-block-end-1 ]">{item.title}</p>
 					<p class="[ fs-300 clr-text-muted ]">{capitalize(item.type)}</p>
 				</div>
+				{#if item.flavors.length > 0}
+					<div class="margin-block-end-2">
+						<p class="margin-block-end-1">Select flavors ({item.flavors.length})</p>
+						<Flex cls={cubeCss('', '', 'flex-wrap')} justify='start'>
+							{#each item.flavors as flavor}
+								<Button 
+									on:click={() => shop.selectFlavor(item.id, flavor)}
+									selected={item.selectedFlavors.includes(flavor)}
+									attachments={['small-pad', 'hologram', 'capsule']}
+								>
+									{capitalize(flavor)}
+								</Button>
+							{/each}
+						</Flex>
+					</div>
+				{/if}
 				<Flex align='center' gap={3}>
 					<ItemPricing {item} />
 					{#if shop.isInCart(item.id)}
