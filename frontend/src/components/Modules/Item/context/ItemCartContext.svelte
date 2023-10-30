@@ -26,21 +26,21 @@
     </p>
 </Flex>
 
-<Flex cls={cubeCss('', '', 'width-100')} justify='center' gap={2}>
+<Flex cls={cubeCss('', '', 'width-100')} justify='space-between' gap={2}>
     <Button 
         on:click={() => openItemModal(item.id)}
         cls={cubeCss('', '', '')} 
-        attachments={['tiny-pad', 'hologram', 'mix']}
+        attachments={['small-pad', 'hologram', 'mix']}
         >
-        <span class="[  fs-350 ]">View</span>
+        <span class="[  fs-400 ]">View</span>
     </Button>
     <Button 
         on:click={() => shop.removeFromCart(item.id)}
         variant='error'
         cls={cubeCss('', '', '')} 
-        attachments={['tiny-pad', 'hologram', 'mix']}
+        attachments={['small-pad', 'hologram', 'mix']}
         >
-        <span class="[  fs-350 ]">Remove</span>
+        <span class="[  fs-400 ]">Remove</span>
     </Button>
 </Flex>
 

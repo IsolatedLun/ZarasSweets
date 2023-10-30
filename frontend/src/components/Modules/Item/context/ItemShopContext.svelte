@@ -14,8 +14,8 @@
     <Button 
         on:click={() => openItemModal(item.id)}
         cls={cubeCss('', '', '')} 
-        attachments={['tiny-pad', 'hologram', 'mix']}
+        attachments={['small-pad', 'hologram', 'mix']}
         >
-        <span class="[  fs-350 ]">Open</span>
+        <span class="[  fs-400 ]">View</span>
     </Button>
 </Flex>
