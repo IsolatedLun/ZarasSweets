@@ -33,6 +33,7 @@ export const ICON_SIGN_IN = '\uf090';
 export const ICON_EDIT ='\uf044';
 export const ICON_LOOP = '\uf01e';
 export const ICON_HEART = '\uf004';
+export const ICON_SPINNER = '\uf110';
 
 export const ICON_GRID_V = '\uf58e';
 export const ICON_GRID_H = '\uf58d';

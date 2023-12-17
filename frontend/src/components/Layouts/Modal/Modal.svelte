@@ -10,6 +10,7 @@
 	import ItemPricing from "../../Modules/Item/ItemPricing.svelte";
 	import MediaScroller from "../../Modules/MediaScroller/MediaScroller.svelte";
 	import { MODAL_ID } from "../../consts";
+	import Image from "../../Modules/Image/Image.svelte";
 
 	
     export let item: T_Item = $shop.store[$shop.selectedItemIndex];
@@ -33,13 +34,15 @@
 				snapsInline={true}
 				gap={2}
 			>
-				{#each item.images as img, i}
-					<Button variant='none' on:click={() => currentImgIndex = i}>
-						<div class="img">
-							<img src={img} alt="" />
-						</div>
-					</Button>
-				{/each}
+				{#key item}
+					{#each item.images as img, i}
+						<Button variant='none' on:click={() => currentImgIndex = i}>
+							<div class="img">
+								<Image src={img} alt="{item.title} {i + 1}" />
+							</div>
+						</Button>
+					{/each}
+				{/key}
 			</MediaScroller>
 		</section>
 		<section class="modal__details">

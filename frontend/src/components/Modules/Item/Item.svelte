@@ -5,6 +5,7 @@
 	import { ICON_IMAGE } from "../../icons";
 	import Flex from "../FlexAndGrid/Flex.svelte";
 	import Icon from "../Icon/Icon.svelte";
+	import Image from "../Image/Image.svelte";
 	import ItemCartContext from "./context/ItemCartContext.svelte";
 	import ItemShopContext from "./context/ItemShopContext.svelte";
 
@@ -14,7 +15,7 @@
 
 <div id={deCleanText(item.title)} class="item">
     <div>
-        <img class="item__thumbnail" src={item.images[0]} alt="" />
+        <Image cls={cubeCss("item__thumbnail", "", "")} src={item.images[0]} alt="" />
     </div>
     <Flex cls={cubeCss('item__content', '', 'padding-2')} useColumn={true} gap={2}>
         <p class="[ fs-400 text-ellipsis-2 ]">{item.title}</p>
